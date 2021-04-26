@@ -1,0 +1,330 @@
+:root{
+  /* color */
+  --white-color:#fff;
+  --black-color:#140a00;
+  --blue-color:#045fd4;
+  --red-color:#ff0000;
+  --grey-dark-color:#909090;
+  --grey-light-color:#e0e0e0;
+
+  /* size */
+  --slide-padding:12px;
+  --avatar-size:36px;
+
+  /* Font size */
+  --font-large:28px;
+  --font-medium:24px;
+  --font-small:22px;
+  --font-micro:20px;
+
+}
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+html, body{
+  margin: 0; padding: 0;
+  width:100%; height:100%;
+}
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: rgba(176, 255, 242, 0.5);
+}
+
+
+header .highlight, header .current a {
+  /* 클릭되어있는 메뉴 반응 */
+  color: rgb(42, 223, 255);
+  font-weight: bold;
+}
+
+
+ul{
+  list-style: none;
+}
+
+button, button:focus{
+  border:none;
+  cursor:pointer;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  position:sticky; 
+  top:0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, .5);
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar_logo i {
+  color: #d49466;
+}
+
+.navbar_menu {
+
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+  background-color: #d49466;
+  border-radius: 4px;
+}
+
+.navbar_icons {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar_icons li {
+  padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar_menu li, .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar_toogleBtn {
+    display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+}
+
+.videoc{
+  position:relative;
+  margin:0 auto;
+  max-width: 800px;
+  width:100%;
+  text-align: center;
+  background-color: var(--black-color);
+}
+.videoc >div{
+  width:100%;
+  padding-bottom: 56.25%;
+  text-align: center;
+  background-color: var(--black-color);
+}
+.videoc > div iframe{
+  position:absolute;
+  z-index: 1;
+  top:0; left:0;
+  width:100%; height:100%;
+}
+
+/* video player */
+.player{
+  /* position:sticky; 
+  top:0; */
+  /* 스크롤 내릴때 따라가는거 > sticky */
+  text-align: center;
+  background-color: var(--black-color);
+}
+.player video{
+  width:100%;
+  height:100%;
+  max-width:1000px;
+}
+
+body > .info{
+  padding:var(--slide-padding);
+}
+
+.info .metadata .hashtags{
+  display: flex;
+  font-size: var(--font-small);
+  color:var(--blue-color);
+}
+
+.info .metadata .hashtags li{
+  margin-right: var(--slide-padding);
+}
+
+.info .metadata .titleAndButton{
+  display: flex;
+}
+
+.info .metadata .titleAndButton .title{
+  font-size: var(--font-medium);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--slide-padding);
+}
+
+.info .metadata .titleAndButton .moreBtn{
+  height:100%;
+}
+
+.info .views{
+  font-size: var(--font-small);
+  color:var(--grey-dark-color);
+}
+
+
+/* up Next */
+.UpNext{
+  padding: 0 var(--slide-padding);
+}
+
+.UpNext > .title{
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-botton: calc(var(--slide-padding) /2);
+}
+
+.UpNext .item{
+  display: flex;
+  margin-top: var(--slide-padding);
+}
+
+.UpNext .item .img{
+  flex:1 1 35%;
+  margin-right: var(--slide-padding);
+}
+
+.UpNext .item .img img{
+  width:100%;
+}
+
+.UpNext .item .info{
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.UpNext .item .moreBtn{
+ flex: 1 1 5%;
+}
+
+.UpNext .item .info .title {
+  font-size: var(--font-small);
+}
+
+.UpNext .item .info .name, 
+.UpNext .item .info .views{
+  font-size: var(--font-micro);
+  color:var(--grey-dark-color);
+}
+
+
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+
+#boxes .box img{
+  width:40px;
+  height:50px;
+}
+
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+
+.dark{
+  padding:15px;
+  background-color: #35424a;
+  color:white;
+  margin:15px;
+}
+.bobo{
+  padding:15px;
+  background-color: #3c6680;
+  color:white;
+  margin:15px;
+}
+
+/* Sidebar */
+aside#sidebar{
+  float:right;
+  width:30%;
+}
+
+
+/* Media Quaries */
+/* 폭 맞출때 변환 */
+@media(max-width: 768px) {
+  /* 768px이 기본적인 모바일 폭이라고 생각하면됨 */
+  header #branding,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar
+  {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }}

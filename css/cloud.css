@@ -1,0 +1,89 @@
+.movewrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  ;
+  width: 100%;
+  z-index: -1;
+}
+
+.movewrap>div {
+  padding-bottom: 40%;
+  width: 100%;
+}
+
+.moving {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes movebg {
+  0% {
+    background-position: 0 top;
+  }
+
+  100% {
+    background-position: -600% top;
+  }
+}
+
+header {
+  max-width: 1200px;
+  width: 100%;
+  margin: 100px auto;
+}
+
+header>div.logo {}
+
+header>div.logo>ul {
+  font-size: 0;
+}
+
+header>div.logo>ul>li {
+  font-size: 30px;
+  font-weight: 900;
+  display: inline-block;
+  vertical-align: center;
+  width: 33.3%;
+}
+
+header>div.logo>ul>li>div {
+  display: block;
+  width: auto;
+  text-align: center;
+  padding: 30px;
+}
+
+header>div.menu {}
+
+header>div.menu>ul {
+  font-size: 0;
+}
+
+header>div.menu>ul>li {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: center;
+  width: 20%;
+  text-align: center;
+}
+
+header>div.menu>ul>li>div {
+  display: block;
+  width: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.slidewrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.slidewrap img {
+  width: 100%;
+}
